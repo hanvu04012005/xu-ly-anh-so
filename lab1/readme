@@ -1,4 +1,4 @@
-Trong bài này em dùng ngôn ngữ Python để viết chương trình xử lý ảnh. Các thư viện chính được dùng gồm:
+Trong bài này em dùng các thư viện gồm:
   PIL: dùng để đọc ảnh, chuyển đổi ảnh và lưu ảnh sau khi xử lý. Ví dụ như Image.open để mở ảnh và Image.fromarray để tạo ảnh mới từ mảng.
   NumPy: thư viện để làm việc với ma trận, dùng để xử lý ảnh dưới dạng mảng số .
   matplotlib.pyplot: giúp hiển thị ảnh lên màn hình bằng plt.imshow.
