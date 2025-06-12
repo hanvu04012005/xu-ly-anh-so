@@ -1,1 +1,14 @@
+Trong bài này em dùng ngôn ngữ Python để viết chương trình xử lý ảnh. Các thư viện chính được dùng gồm:
+  PIL: dùng để đọc ảnh, chuyển đổi ảnh và lưu ảnh sau khi xử lý. Ví dụ như Image.open để mở ảnh và Image.fromarray để tạo ảnh mới từ mảng.
+  NumPy: thư viện để làm việc với ma trận, dùng để xử lý ảnh dưới dạng mảng số .
+  matplotlib.pyplot: giúp hiển thị ảnh lên màn hình bằng plt.imshow.
+  os: để đọc tên file ảnh trong thư mục và tạo thư mục lưu kết quả os.listdir, os.makedirs
+Chương trình cho phép người dùng chọn 1 trong 5 thuật toán để xử lý ảnh:
+  Image Inverse – Đảo ảnh thành ảnh âm bản
+  Gamma Correction – Hiệu chỉnh độ sáng bằng công thức gamma
+  Log Transform – Dùng hàm log để làm rõ vùng tối
+  Histogram Equalization – Cân bằng độ sáng ảnh
+  Contrast Stretching – Tăng độ tương phản bằng cách kéo giãn giá trị điểm ảnh
+Khi chạy chương trình, ta sẽ được nhập vào một phím (I, G, L, H, C) để chọn cách xử lý ảnh mà mình muốn
+Sau đó, chương trình sẽ tự động lấy tất cả ảnh trong thư mục tên là exerise, xử lý từng ảnh theo cách đã chọn, rồi lưu ảnh kết quả vào thư mục output1
 
