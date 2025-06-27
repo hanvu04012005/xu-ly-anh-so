@@ -59,7 +59,7 @@ Mục tiêu là khi chỉ chuột vào ảnh, chương trình sẽ hiện ra t�
 ```bash
 pip install numpy scipy matplotlib imageio
 ```
-2. Mở `main.ipynb` trên VSCode hoặc Google Colab  
+2. Mở `main.ipynb` trên VSCode 
 3. Chạy từng ô và xem kết quả ảnh sau mỗi biến đổi  
 4. Có thể thay đổi góc xoay, độ zoom, độ dịch chuyển để thử nghiệm thêm
 ---
