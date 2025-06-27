@@ -51,10 +51,10 @@ nho = nd.zoom(img, zoom=0.5)
 ```
 ---
 ## 6. Hiển thị tọa độ  
-Mục tiêu là khi rê chuột vào ảnh, chương trình sẽ hiện ra tọa độ của điểm đó. Cái này giúp mình biết chính xác vị trí pixel nào trên ảnh.  
+Mục tiêu là khi chỉ chuột vào ảnh, chương trình sẽ hiện ra tọa độ của điểm đó. Cái này giúp biết chính xác vị trí pixel nào trên ảnh.  
 ---
 ---
-##  Hướng dẫn chạy chương trình  
+##  chạy chương trình  
 1. Cài thư viện cần thiết:  
 ```bash
 pip install numpy scipy matplotlib imageio
@@ -65,6 +65,4 @@ pip install numpy scipy matplotlib imageio
 ---
 
 ##  Tài liệu tham khảo  
-- Giáo trình *Digital Image Processing* – Gonzalez & Woods  
-- Trang tài liệu SciPy, Matplotlib  
-- Slide bài giảng Nhập môn Xử lý ảnh số – Trường ĐH Văn Lang
+- file pdf thực hành – Trường ĐH Văn Lang
