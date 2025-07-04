@@ -45,8 +45,6 @@ Trong bài Lab này, em học cách xử lý ảnh để tách đối tượng k
 gray = img.mean(axis=2).astype(np.uint8)
 ```
 
- Ảnh minh họa: Chuyển đổi ảnh màu đầu vào sang dạng xám rõ nét, thấy rõ đối tượng và nền.
-
 ---
 
 ### 2. Biểu đồ Histogram *(Histogram)*
