@@ -9,7 +9,7 @@
 
 ##  Mục tiêu bài Lab
 
-Trong bài Lab này, sinh viên thực hành các bước xử lý ảnh cơ bản để phân vùng ảnh (segmentation), từ đó tách đối tượng khỏi nền dựa trên cường độ xám. Các bước bao gồm: chuyển đổi sang ảnh xám, hiển thị histogram, ngưỡng hóa, trích vùng quan tâm, làm mịn ảnh và tạo mặt nạ để làm nổi bật vùng mong muốn.
+Trong bài Lab này, sinh viên thực hành các bước xử lý ảnh cơ bản để phân vùng ảnh , từ đó tách đối tượng khỏi nền dựa trên cường độ xám. Các bước bao gồm: chuyển đổi sang ảnh xám, hiển thị histogram, ngưỡng hóa, trích vùng quan tâm, làm mịn ảnh và tạo mặt nạ để làm nổi bật vùng mong muốn.
 
 ---
 
