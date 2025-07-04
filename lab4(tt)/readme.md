@@ -1,8 +1,10 @@
 # Nhập Môn Xử Lý Ảnh Số – Lab 4
 
 **Chủ đề:** Phân vùng ảnh xám 
+
 **Sinh viên thực hiện:**  Nguyễn Hạn Vũ  **MSSV:** 2374802010571
 **Môn học:** Nhập môn Xử lý ảnh số
+
 **Giảng viên:** Thầy Đỗ Hữu Quân
 
 ---
