@@ -32,7 +32,7 @@ Trong bài Lab này, em học cách xử lý ảnh để tách đối tượng k
 
 ####  Định nghĩa:
 
-Ảnh xám là ảnh chỉ có một kênh màu, với giá trị pixel trong khoảng **0–255**, đại diện cho độ sáng.
+Ảnh xám là ảnh chỉ có một kênh màu, với giá trị picxel trong khoảng **0–255**, đại diện cho độ sáng.
 
 ####  Tác dụng:
 
@@ -62,7 +62,7 @@ Histogram thể hiện **tần suất xuất hiện của mức xám** trong ả
 
  Khi ảnh có **2 đỉnh rõ ràng** → có thể chọn **ngưỡng ở giữa** để phân vùng ảnh.
 
-####  Lệnh hiển thị Histogram:
+####   Histogram:
 
 ```python
 plt.hist(gray.ravel(), bins=256)
