@@ -66,8 +66,6 @@ Histogram thể hiện **tần suất xuất hiện của mức xám** trong ả
 plt.hist(gray.ravel(), bins=256)
 ```
 
- Ảnh minh họa: Biểu đồ histogram từ ảnh xám, thấy rõ hai vùng đậm và nhạt.
-
 ---
 
 ### 3. Ngưỡng hóa nhị phân *(Binary Thresholding)*
@@ -92,7 +90,6 @@ f(x, y) = 255 nếu I(x, y) >= T
 binary = gray > T  # T là ngưỡng, ví dụ T=128
 ```
 
-📷 Ảnh minh họa: Ảnh đen trắng rõ nét các vùng.
 
 ---
 
@@ -110,8 +107,6 @@ Lấy một phần của ảnh mà ta cần phân tích, bỏ vùng thừa.
 ```python
 roi = gray[y1:y2, x1:x2]
 ```
-
- Ảnh minh họa: Chỉ giữ lại vùng đối tượng (hộp, sản phẩm...).
 
 ---
 
@@ -131,8 +126,6 @@ from scipy.ndimage import gaussian_filter
 smooth = gaussian_filter(binary.astype(float), sigma=1)
 ```
 
- Ảnh minh họa: Ảnh được làm mịn, các cạnh không còn bị răng cưa.
-
 ---
 
 ### 6. Tạo mặt nạ *(Masking)*
@@ -150,8 +143,6 @@ Tạo mặt nạ nhị phân (0 và 1) để **lọc và giữ lại vùng mong 
 mask = smooth > 0.5
 result = gray * mask
 ```
-
- Ảnh minh họa: Ảnh sau khi áp mặt nạ, chỉ giữ lại đối tượng chính.
 
 ---
 
