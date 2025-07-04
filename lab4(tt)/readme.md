@@ -16,7 +16,7 @@ Trong bài Lab này, em học cách xử lý ảnh để tách đối tượng k
 
 ---
 
-## 🛠 Công cụ sử dụng
+##  Công cụ sử dụng
 
 * **Python** – ngôn ngữ chính
 * **NumPy** – xử lý mảng ảnh
