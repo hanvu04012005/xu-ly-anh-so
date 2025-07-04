@@ -32,12 +32,13 @@ Trong bài Lab này, em học cách xử lý ảnh để tách đối tượng k
 
 ####  Định nghĩa:
 
-Ảnh xám là ảnh chỉ có một kênh màu, với giá trị picxel trong khoảng **0–255**, đại diện cho độ sáng.
+Ảnh xám là ảnh mà mỗi điểm ảnh (pixel) chỉ có một giá trị độ sáng, nằm trong khoảng từ 0 đến 255. Giá trị này cho biết pixel đó sáng hay tối, càng gần 0 thì càng đen, càng gần 255 thì càng trắng. Ảnh xám đơn giản hơn ảnh màu nên em dễ xử lý và áp dụng các kỹ thuật như ngưỡng hóa hay lọc ảnh.
 
 ####  Tác dụng:
 
-* Giảm số kênh từ 3 (RGB) còn 1 → nhẹ hơn khi xử lý
-* Dễ áp dụng các thuật toán phân vùng, như ngưỡng hóa
+* Ảnh xám chỉ còn 1 kênh thay vì 3 kênh màu (RGB), nên nhẹ và xử lý nhanh hơn.
+* Dễ dùng cho các kỹ thuật như ngưỡng hóa hay phân đoạn vì chỉ cần làm việc với 1 giá trị độ sáng.
+
 
 ####  Công thức chuyển ảnh màu sang xám:
 
@@ -51,14 +52,15 @@ gray = img.mean(axis=2).astype(np.uint8)
 
 ####  Định nghĩa:
 
-Histogram thể hiện **tần suất xuất hiện của mức xám** trong ảnh .
+Histogram là biểu đồ cho thấy trong ảnh có bao nhiêu pixel ở mỗi mức xám, từ 0 (đen nhất) đến 255 (trắng nhất). Nhờ đó, em có thể biết ảnh sáng hay tối, có phân bố đều không, và dễ chọn ngưỡng để tách đối tượng khỏi nền.
+
 
 ####  Tác dụng:
 
 * Cho biết phân bố độ sáng trong ảnh
 * Giúp xác định **ngưỡng phân vùng phù hợp**
 
- Khi ảnh có **2 đỉnh rõ ràng** → có thể chọn **ngưỡng ở giữa** để phân vùng ảnh.
+ Khi ảnh có 2 đỉnh rõ ràng → có thể chọn ngưỡng ở giữa để phân vùng ảnh.
 
 ####   Histogram:
 
@@ -72,7 +74,7 @@ plt.hist(gray.ravel(), bins=256)
 
 #### Định nghĩa:
 
-Dựa vào một giá trị ngưỡng `T`, chuyển mỗi pixel thành **đen hoặc trắng**.
+Dựa vào một giá trị ngưỡng T, em sẽ so sánh từng pixel trong ảnh xám: nếu pixel sáng hơn hoặc bằng T thì cho nó thành màu trắng, còn nếu tối hơn thì cho thành màu đen. Như vậy, ảnh sẽ chỉ còn 2 màu đen và trắng, giúp em dễ dàng tách được vùng đối tượng ra khỏi nền. Đây là cách đơn giản nhưng rất hiệu quả để phân vùng ảnh.
 
 ####  Công thức toán học:
 
@@ -97,7 +99,7 @@ binary = gray > T  # T là ngưỡng, ví dụ T=128
 
 ####  Định nghĩa:
 
-Lấy một phần của ảnh mà ta cần phân tích, bỏ vùng thừa.
+Lấy một phần của ảnh mà em muốn tập trung xử lý, còn những vùng không cần thiết thì bỏ đi. Cách này giúp giảm nhiễu, tiết kiệm thời gian xử lý và chỉ phân tích đúng vùng em quan tâm, ví dụ như phần chứa đối tượng chính.
 
 ####  Tác dụng:
 
@@ -114,7 +116,8 @@ roi = gray[y1:y2, x1:x2]
 
 ####  Định nghĩa:
 
-Làm mượt biên ảnh và giảm nhiễu bằng các bộ lọc trung bình hoặc Gaussian.
+Làm mượt ảnh nghĩa là giúp các vùng chuyển màu trở nên mịn hơn, không bị gắt hoặc răng cưa. Em dùng các bộ lọc như trung bình hoặc Gaussian để làm mờ nhẹ ảnh, từ đó giảm bớt nhiễu nhỏ và làm cho đường biên của đối tượng rõ ràng, dễ xử lý hơn trong các bước tiếp theo.
+
 
 ####  Tác dụng:
 
@@ -132,7 +135,7 @@ smooth = gaussian_filter(binary.astype(float), sigma=1)
 
 ####  Định nghĩa:
 
-Tạo mặt nạ nhị phân (0 và 1) để **lọc và giữ lại vùng mong muốn** từ ảnh gốc.
+Tạo mặt nạ nhị phân tức là tạo một ảnh chỉ gồm các giá trị 0 và 1, trong đó số 1 là vùng em muốn giữ lại (đối tượng), còn số 0 là vùng cần bỏ (nền). Sau đó, em nhân mặt nạ này với ảnh gốc để chỉ hiển thị phần đối tượng, giúp làm nổi bật đúng vùng cần phân tích.
 
 ####  Tác dụng:
 
@@ -146,19 +149,6 @@ result = gray * mask
 
 ---
 
-##  Cách chạy chương trình
-
-1. Cài thư viện cần thiết:
-
-```bash
-pip install numpy matplotlib imageio scipy
-```
-
-2. Mở file `main.ipynb` trong VSCode hoặc Jupyter Notebook
-3. Chạy từng cell và quan sát kết quả ở mỗi bước
-4. Có thể thay đổi giá trị ngưỡng, vùng ROI, sigma làm mịn để thấy ảnh hưởng
-
----
 
 ##  Tài liệu tham khảo
 
