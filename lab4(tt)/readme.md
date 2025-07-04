@@ -45,7 +45,7 @@ Trong bài Lab này, em học cách xử lý ảnh để tách đối tượng k
 gray = img.mean(axis=2).astype(np.uint8)
 ```
 
-📷 Ảnh minh họa (ảnh bạn gửi): Chuyển đổi ảnh màu đầu vào sang dạng xám rõ nét, thấy rõ đối tượng và nền.
+ Ảnh minh họa: Chuyển đổi ảnh màu đầu vào sang dạng xám rõ nét, thấy rõ đối tượng và nền.
 
 ---
 
@@ -53,7 +53,7 @@ gray = img.mean(axis=2).astype(np.uint8)
 
 ####  Định nghĩa:
 
-Histogram thể hiện **tần suất xuất hiện của các mức xám** trong ảnh (0–255).
+Histogram thể hiện **tần suất xuất hiện của mức xám** trong ảnh .
 
 ####  Tác dụng:
 
