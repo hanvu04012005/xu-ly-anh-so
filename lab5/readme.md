@@ -61,8 +61,8 @@ plt.title("Cạnh dùng Sobel")
 plt.show()
 ```
 ---
-### 2.4. Xác định góc của đối tượng bằng Harris thủ công
- Phần này, ta tự cài đặt thuật toán Harris để xác định góc của các đối tượng trong ảnh
+### 2.4. Xác định góc của đối tượng 
+ Phần này, ta cài đặt thuật toán Harris để xác định góc của các đối tượng trong ảnh
 - Tính đạo hàm ảnh theo 2 trục bằng Sobel
 - Nhân chéo đạo hàm để tính ma trận C
 - Làm trơn bằng bộ lọc Gaussian
