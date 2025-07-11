@@ -6,13 +6,12 @@
 **GV hướng dẫn:** Thầy Đỗ Hữu Quân  
 ---
 ##  Mục tiêu bài học
-- Biết cách gán nhãn (label) cho từng vùng đối tượng trong ảnh  
+- Biết cách gán nhãn cho từng vùng đối tượng trong ảnh  
 - Tính được các đặc trưng cơ bản như: diện tích, tâm điểm, hộp bao quanh  
 - Làm quen với các kỹ thuật tìm biên, xác định góc  
 - Thực hành thêm về tìm đường thẳng và ghép đối tượng giữa hai ảnh
 ---
 ## thư viện cần cài
-
 ```bash
 pip install numpy scipy matplotlib imageio opencv-python scikit-image
 ```
