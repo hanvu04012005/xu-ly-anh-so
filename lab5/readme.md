@@ -208,4 +208,4 @@ draw_matches(img1, img2, valid_pts1, valid_pts2, match_idx)
 ---
 
 ##  Tài liệu tham khảo
-- tài liệu xử lý ảnh
+- file word thực hành – Trường ĐH Văn Lang
