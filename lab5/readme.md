@@ -64,8 +64,7 @@ plt.show()
 ### 2.4. Xác định góc của đối tượng 
  Phần này, ta cài đặt thuật toán Harris để xác định góc của các đối tượng trong ảnh
 - Tính đạo hàm ảnh theo 2 trục bằng Sobel
-- Nhân chéo đạo hàm để tính ma trận C
-- Làm trơn bằng bộ lọc Gaussian
+- Nhân chéo đạo hàm để tính ma trận 
 - Áp dụng công thức tính điểm góc: `R = detC - alpha * (traceC)**2`
 ```python
 from PIL import Image
@@ -92,7 +91,6 @@ plt.show()
 ```
 ---
 ### 2.5.1. Dò tìm đường thẳng trong ảnh 
-
 Ta thực hiện dò tìm các đường thẳng bằng cách tính toán giá trị `rho = x * cos(theta) + y * sin(theta)` và ghi nhận vào ma trận 
 ```python
 def LineHough(data, gamma):
@@ -124,7 +122,6 @@ plt.imshow(bmg)
 plt.show()
 ```
 ---
-
 ### 2.5.2. Dò tìm đường tròn trong ảnh 
 Dùng thư viện `corner_harris` của `skimage.feature` để phát hiện các điểm đặc trưng như góc và cạnh, có thể ứng dụng trong dò tìm đường cong, bao gồm cả đường tròn.
 ```python
